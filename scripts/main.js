@@ -1,4 +1,5 @@
-// TIMELINE
+// TIMELINE - This code and switch statement was adapted from Professor McAdams' JSFiddle, as well as from my own music sampler project: https://jsfiddle.net/macloo/p24vrczo/
+
 let musicClips = document.querySelectorAll('.music');
 let albumCovers = document.querySelectorAll('.cover');
 
@@ -64,6 +65,10 @@ switch (e.target.getAttribute('id')) {
         document.querySelector('#waitressmusic')
         .style.display = 'block';
         break;
+      case 'frozenAlbum':
+        document.querySelector('#frozenmusic')
+        .style.display = 'block';
+        break;
       case 'meanGirlsAlbum':
         document.querySelector('#meangirlsmusic')
         .style.display = 'block';
@@ -79,7 +84,7 @@ switch (e.target.getAttribute('id')) {
 
   });
 
-// HIGHCHART
+// HIGHCHART - This code was taken from and adapted from Highcharts as one of the demo scatterplot examples
 
 Highcharts.chart('container', {
     chart: {
@@ -90,7 +95,7 @@ Highcharts.chart('container', {
         text: 'Changes in Broadway Attendance and Revenue through the seasons'
     },
     subtitle: {
-        text: 'Source: Broadwayleauge.com'
+        text: 'Source: Broadwayleague.com'
     },
     xAxis: {
         title: {
@@ -111,7 +116,7 @@ Highcharts.chart('container', {
         align: 'left',
         verticalAlign: 'top',
         x: 100,
-        y: 70,
+        y: 90,
         floating: true,
         backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
         borderWidth: 1
@@ -190,11 +195,3 @@ divs.forEach(function(el) {
     }
   }
 });
-
-// FOOTER
-
-document.getElementById("sources").onclick = function() {myFunction()};
-
-function myFunction() {
-  document.getElementById("sources").innerHTML = "NYC Skyline photo taken by Gary Craig from Flickr, Broadway League for statistics, Playlist Research by Alex Cosper for timeline information, Theatre Seat Store for list of Broadway Theatres, and Slate for information on Broadway musicals.";
-}
