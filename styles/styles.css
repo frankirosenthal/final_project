@@ -28,18 +28,21 @@ h2.headings {
   margin: auto;
 }
 
-#secondpage {
+#pagetwo {
   max-width: 850px;
   margin: auto;
 }
 
-#thirdpage {
+/*
+#pagethree {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 850px;
   margin: auto;
 }
+*/
+
 
 
 h1 {
@@ -63,6 +66,7 @@ p {
 #headimage {
   max-width: 100%;
 }
+
 
 /*
 .cover {
@@ -179,6 +183,23 @@ footer {
   border-radius: 6px;
 }
 
+/* TRIVIA */
+
+.answers {
+  background: #fff;
+  border: 1px solid #000;
+  width: 200px;
+  padding: 1.5rem;
+  margin: 1rem 0.2rem;
+  border-radius: 80px;
+  display: inline-block;
+  text-align: center;
+}
+
+#firstQ, #secondQ, #thirdQ, #fourthQ {
+  text-align: center;
+}
+
 /* HIGHCHARTS */
 
 #container {
@@ -218,23 +239,6 @@ th {
     padding: 10px;
 }
 
-
-/* TRIVIA */
-
-.answers {
-  background: #fff;
-  border: 1px solid #000;
-  width: 200px;
-  padding: 1.5rem;
-  margin: 1rem 0.2rem;
-  border-radius: 80px;
-  display: inline-block;
-  text-align: center;
-}
-
-#firstQ, #secondQ, #thirdQ, #fourthQ {
-  text-align: center;
-}
 
 /* Media queries */
 

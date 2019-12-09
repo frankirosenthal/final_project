@@ -12,9 +12,7 @@ function hideAll() {
 hideAll();
 
 albumCovers.forEach(function(el) {
-  el.onclick = (e) => {
-
-hideAll();
+  el.onclick = (e) => {hideAll();
 
 switch (e.target.getAttribute('id')) {
       case 'westSideStoryAlbum':
@@ -82,6 +80,22 @@ switch (e.target.getAttribute('id')) {
         });
     }
 
+  });
+
+  // TRIVIA
+
+  let divs = document.querySelectorAll('.answers');
+
+  // check if the clicked element has a certain class
+  // change its color based on its class
+  divs.forEach(function(el) {
+    el.onclick = (e) => {
+      if ( e.target.classList.contains("wrong") ) {
+        e.target.style.background = "#c00";
+      } else {
+        e.target.style.background = "#0c0";
+      }
+    }
   });
 
 // HIGHCHART - This code was taken from and adapted from Highcharts as one of the demo scatterplot examples
@@ -178,20 +192,4 @@ Highcharts.chart('container', {
         color: 'rgba(223, 83, 83, .5)',
         data: [[14.77, 1829]]
     }]
-});
-
-// TRIVIA
-
-let divs = document.querySelectorAll('.answers');
-
-// check if the clicked element has a certain class
-// change its color based on its class
-divs.forEach(function(el) {
-  el.onclick = (e) => {
-    if ( e.target.classList.contains("wrong") ) {
-      e.target.style.background = "#c00";
-    } else {
-      e.target.style.background = "#0c0";
-    }
-  }
 });
